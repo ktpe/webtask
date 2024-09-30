@@ -12,7 +12,7 @@ body, html {
 }
 
 header {
-    height: 60px;
+    height: 120px;
     background-color: black;
     color: white;
     padding: 5px;
@@ -30,17 +30,25 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
+    height: 100%;
+    align-items: center; 
 }
 
 nav ul li {
     margin-right: 20px;
+    display: flex;
+    align-items: center;
+    height: 100%; 
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     padding: 10px;
-    display: block;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 18px;
 }
 
 nav ul li a:hover {
@@ -48,26 +56,40 @@ nav ul li a:hover {
 }
 
 .logo {
-    width: 100px;
+    width: 180px;
     height: 100%;
     background-color: silver;
     margin-right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 main {
     flex-grow: 1;
-    padding-top: 70px;
+    padding-top: 130px;
 }
 
 .hero-image {
     height: 33vh;
-    background-color: silver;
+    background-color: snow;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .section {
@@ -88,7 +110,15 @@ footer {
 
 .dropdown {
     position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.dropdown > a {
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .dropdown-content {
@@ -97,6 +127,8 @@ footer {
     background-color: white;
     min-width: 160px;
     z-index: 1;
+    top: 100%;
+    left: 0;
 }
 
 .dropdown-content a {
